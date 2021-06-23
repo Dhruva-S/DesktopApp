@@ -1,0 +1,18 @@
+{
+  "name": "editor",
+  "version": "1.0.0",
+  "description": "EasyText",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dhruva",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nativefier": "^44.0.2",
+    "word-definition": "^2.1.6"
+  }
+}

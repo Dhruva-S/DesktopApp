@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"  href="../css/newsstyles.css">
+    <title>News</title>
+    <!--fontawespme icons-->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">NEWS</a>
+    <form class="form-inline">  
+      <input id="userTopic" type="text"  class="form-control mr-sm-2"  placeholder="Search" aria-label="Search" >
+      <button class="btn btn-outline-success my-2 my-sm-0" onclick="callGetdata()" >Search</button>
+    </form>
+  </nav>
+<body>
+    <div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            <button id ="sports" value="sports" class="front-page-link btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class='fas fa-futbol'></i>Sports</button>
+            <button id ="politics" value="politics" class="front-page-link btn btn-warning btn-lg active" role="button" aria-pressed="true"><i class='fas fa-vote-yea'></i>Politics</button>
+            <button id ="cs" value="computerScience"  class="front-page-link btn btn-info btn-lg active" role="button" aria-pressed="true"><i class='fas fa-laptop-code'></i>Computer Science</button>
+            <button id ="education" value="education"  class="front-page-link btn btn-success btn-lg active" role="button" aria-pressed="true"><i class='fas fa-graduation-cap'></i>Education</button>
+            <button id ="food" value="food"class="front-page-link btn btn-light btn-lg active" role="button" aria-pressed="true"><i class='fas fa-apple-alt'></i>Food</button>
+            <button id ="COVID-19" value="COVID-19" class="front-page-link btn btn-danger btn-lg active" role="button" aria-pressed="true"><i class='fas fa-virus'></i>COVID-19</button>  
+        </div>
+
+        <div class="col-md-9">  
+        <h2 id="topicDisplay"  style="text-align: center;">Top News</h2>
+        <div id="text"></div>    
+        </div>
+    </div> 
+    </div> 
+    <script src="../javascript/news.js"></script>  
+    </body>
+</html>
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+<link rel="stylesheet"  href="../css/styles.css">
+<!--Fontawesome icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet"/>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Editor</title>
+</head>
+<body>
+    <div class="container">
+    <h1 class="text-center">TEXT EDITOR</h1>   
+    </div>  
+
+<!--BUTTONS-->
+    <div class="container text-left">
+        <button class="bold btn btn-dark btn-lg" ><i class="fa fa-bold"></i></button>
+        <button class="italic btn btn-dark btn-lg" ><i class="fa fa-italic"></i></button>
+        <button class="left-align btn btn-dark btn-lg" ><i class="fa fa-align-left"></i></button>
+        <button class=" center-align btn btn-dark btn-lg" ><i class="fa fa-align-center"></i></button>
+        <button class=" right-align btn btn-dark btn-lg" ><i class="fa fa-align-right"></i></button>
+        <button class=" underline btn btn-dark btn-lg" ><i class="fa fa-underline"></i></button>
+        <button class=" caps btn btn-dark btn-lg" >Aa</button>
+        <!-- <div class="options dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Text size
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="small-Text dropdown-item" href="#">small</a>
+              <a class="medium-Text Text dropdown-item" href="#">medium</a>
+              <a class="large-Text dropdown-item" href="#">large</a>
+            </div>
+        </div> -->
+        <button class="options clear btn btn-dark btn-lg" ><i class="fa fa-trash"></i></button>
+
+    </div>
+
+ <div class="container-fluid">   
+<div class="row">
+
+    <!--COLOR PALETTE-->
+<div class="col-md-2">
+    <h3 class="text-right"> Background </h3>
+    <button type="button" class="btn btn-primary btn-circle btn-xl ">blue</button>
+    <button type="button" class="btn btn-success btn-circle btn-xl ">green</button>
+    <button type="button" class="btn btn-danger btn-circle btn-xl  ">red</button>
+    <button type="button" class="btn btn-warning btn-circle btn-xl ">yellow</button>
+    <button type="button" class="dark btn btn-dark btn-circle btn-xl ">black</button>
+    
+</div>
+
+<div class="col-md-6">
+<!--TEXTAREA-->
+    <textarea  contenteditable="true" class="" id="textarea" rows="15" cols="80" value="">
+    </textarea>
+    <button onclick="save()" class="btn btn-success">save</button>
+    <h3>String Length: </h3>
+    <h3 id="counter" ><script>document.write(localStorage.getItem('text_in_editor').length);</script></h3>
+</div>
+
+<!-- <div class="col-md-2 text-left">
+google search
+<h3> Search for words</h3>
+<script async src="https://cse.google.com/cse.js?cx=1a58a8137c6b9991f"></script>
+<div class="gcse-search"></div>
+</div> -->
+ <div class="col-md-2">
+             <form method="post" action="/">
+            <h3>Search for word meanings,type and definition.</h3>
+            <input type="text" name="word">
+            <button class="btn btn-primary" type="submit">search</button>
+            </form>   
+
+            <h3 class="word">Word</h3>
+            <p><%= name%></p>
+            <h3 class="category">Category</h3>
+            <p><%= category%></p>
+            <h3 class="word">Definition</h3>
+            <p><%= definition%></p>
+            
+</div>
+</div>
+
+<!--Save the content in the textarea to localstorage-->
+<script>
+    if (localStorage.getItem('text_in_editor') !== null) {
+    // ...then show it
+    document.getElementById('textarea').value = localStorage.getItem('text_in_editor');
+   }
+   function save(){
+       localStorage.setItem('text_in_editor', document.getElementById('textarea').value);
+   }
+   </script>
+   
+<!--Javascript file-->
+<script src="../javascript/events.js"></script>   
+</body>
+</html>

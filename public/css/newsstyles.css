@@ -1,0 +1,12 @@
+.news{
+    padding-bottom: 2px;
+    background-color: #F5F5F5;
+    margin: auto;
+    text-align: center;
+}
+
+.front-page-link {
+    float:right;
+    clear:right;
+    margin-bottom: 2px;
+}

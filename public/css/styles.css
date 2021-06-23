@@ -1,0 +1,64 @@
+
+.container{
+	padding-bottom:2%;
+}
+
+ .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+  .btn-circle.btn-xl {
+  	float:right;
+  	clear:right;
+  }
+
+.options{
+	display:inline;
+}
+.bold { font-weight: bold; }
+
+.italics{
+	font-style: italic;
+}
+
+.caps{
+	 text-transform: uppercase;
+}
+
+.bg-bg-success{
+background-color: greenyellow;
+}
+.bg-bg-primary{
+  background-color: blue;;
+  }
+  .bg-bg-danger{
+    background-color: red;
+    }
+    .bg-bg-warning{
+      background-color: yellow;
+      }
+      .bg-bg-dark{
+        color:white;
+        background-color: black;
+        }
+                    
+.underline{
+  text-decoration: underline;
+}
+/* TEXT SIZE */
+/* .sm-txt{
+font-size:10px;
+ }
+
+ .md-txt{
+font-size:20px;
+ }
+
+ .lg-txt{
+font-size:30px;
+ }*/
