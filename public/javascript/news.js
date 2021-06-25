@@ -10,7 +10,7 @@ function getdata(topic){
     // var url="https://newsapi.org/v2/top-headlines?country=us&apiKey=0917198423514d8c82a41272ff93c662";      //Top Headlines from india
    var req = new Request(url);
    
-   fetch(req)
+   fetch(req, { mode: 'no-cors' })
        .then(function(response) {
             // console.log(response.json());
            return response.json();
