@@ -62,6 +62,11 @@ app.get("/html/myeditor.html",function(req,res){
     res.sendFile(path.join(__dirname,'html','myeditor.html'));
 });
 
+app.get("/html/covid.html",function(req,res){
+    // res.sendFile(__dirname+"/html/myeditor.html");
+    res.sendFile(path.join(__dirname,'html','covid.html'));
+});
+
 
 app.get("/ToDoList/index.html",function(req,res){
     // res.sendFile(__dirname+"/html/myeditor.html");
