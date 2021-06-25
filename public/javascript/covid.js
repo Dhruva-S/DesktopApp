@@ -6,9 +6,13 @@ window.onload = function() {
     document.getElementById("userCountry").value=localStorage.getItem('userCountry');
     var Topic=localStorage.getItem('userCountry');
    getCovidDataByCountry(Topic);
+
     }
   };
 
+  function resetAndGet(){
+    localStorage.removeItem('userCountry');
+  }
 
 function getCovidData(){
     // document.getElementById("topicDisplay").innerHTML=localStorage.getItem('userTopic');
