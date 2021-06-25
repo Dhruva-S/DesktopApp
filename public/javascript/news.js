@@ -41,10 +41,10 @@ function getdata(topic){
        getdata(Topic);
       };
    function callGetdata(){
-       alert("i'm in!");
+    //    alert("i'm in!");
        var Topic=document.getElementById("userTopic").value;
        console.log("here:"+Topic);
-       alert("Topic: "+Topic);
+    //    alert("Topic: "+Topic);
        localStorage.setItem('userTopic', document.getElementById('userTopic').value);
        document.getElementById("userTopic").value=localStorage.getItem('userTopic');
        getdata(Topic);
