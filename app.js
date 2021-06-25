@@ -14,12 +14,6 @@ app.listen(process.env.PORT||3000,function(req,res){
     console.log("server has started om port 3000");
 });
 
-//allow CORS
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://vast-fortress-97790.herokuapp.com/html/news.html.TLD"); // update to match the domain you will make the request from
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
 
 
 app.use(express.static(__dirname + '/public'));
