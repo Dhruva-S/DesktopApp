@@ -10,7 +10,7 @@ function getdata(topic){
     // var url="https://newsapi.org/v2/top-headlines?country=us&apiKey=0917198423514d8c82a41272ff93c662";      //Top Headlines from india
    var req = new Request(url);
    
-   fetch(req,{method: 'POST',})
+   fetch(req)
        .then(function(response) {
             // console.log(response.json());
            return response.json();
@@ -19,16 +19,17 @@ function getdata(topic){
            console.log(data);  
            const html=data.articles.map(article=>{
            return  `
+           <div>
            <div class="news" >
            <p><img src="${article.urlToImage}" width="200px" height="100px" alt="Article image" /></p>
            <h3>Author:</h3> ${article.author}
            <a href="${article.url}"><h3>Link to the article</h3><a>
            <h3>Content:</h3>${article.content}`
-           +"</div>"
-           })
+           +"</div></div><br>"
+           }).join('');  
            console.log(html);
            document.getElementById("text").innerHTML=html;
-       });  
+       });
        }
    
        window.onload = function() {
