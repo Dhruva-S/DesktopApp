@@ -27,7 +27,7 @@ var wd = require("word-definition");
 app.get("/",function(req,res){
     // const query=req.body.cityName;
     const query="Mangalore";
-   const url="https://api.openweathermap.org/data/2.5/weather?q="+query+"&Appid=709116cfdf42b242a173d864e3de0d7f&units=metric";
+   const url="https://api.openweathermap.org/data/2.5/weather?q="+query+"&Appid=YOUR API ID&units=metric";
    https.get(url,function(response){
    console.log(response.statusCode);
    
