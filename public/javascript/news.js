@@ -6,7 +6,7 @@ function getdata(topic){
     //          'from=2021-06-22&' +
     //          'sortBy=popularity&' +
     //          'apiKey=0917198423514d8c82a41272ff93c662';
-   var url='https://gnews.io/api/v4/search?q='+topic+'&token=0ecab469d6e94c2fcec80c2ed936f9db&lang=en';
+   var url='https://gnews.io/api/v4/search?q='+topic+'&token=YOUR TOKEN &lang=en';
     // var url="https://newsapi.org/v2/top-headlines?country=us&apiKey=0917198423514d8c82a41272ff93c662";      //Top Headlines from india
    var req = new Request(url);
    
