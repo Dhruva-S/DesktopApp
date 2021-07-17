@@ -1,13 +1,26 @@
 function getdata(topic){
     document.getElementById("topicDisplay").innerHTML=localStorage.getItem('userTopic');
     console.log(topic);
+    
+    /* This is the old api which was being used */
     // var url = 'https://newsapi.org/v2/everything?' +
     //          'q='+topic+'&' +
     //          'from=2021-06-22&' +
     //          'sortBy=popularity&' +
-    //          'apiKey=0917198423514d8c82a41272ff93c662';
+    //          'apiKey=YOUR API KEY';
+    /* ***************************************** */
+    
+    //Url for the API in use 
    var url='https://gnews.io/api/v4/search?q='+topic+'&token=YOUR TOKEN &lang=en';
-    // var url="https://newsapi.org/v2/top-headlines?country=us&apiKey=0917198423514d8c82a41272ff93c662";      //Top Headlines from india
+    
+    
+    
+    /* **********8old api ***************** */
+    // var url="https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR API KEY";      //Top Headlines from india
+    /* ************************************ */
+    
+    
+    
    var req = new Request(url);
    
    fetch(req)
@@ -15,22 +28,6 @@ function getdata(topic){
             // console.log(response.json());
            return response.json();
        })
-    //    .then(data=> {
-    //        console.log(data);  
-    //        const html=data.articles.map(article=>{
-    //        return  `
-    //        <div>
-    //        <div class="news" >
-    //        <p><img src="${article.urlToImage}" width="200px" height="100px" alt="Article image" /></p>
-    //        <h3>Author:</h3> ${article.author}
-    //        <a href="${article.url}"><h3>Link to the article</h3><a>
-    //        <h3>Content:</h3>${article.content}`
-    //        +"</div></div><br>"
-    //        }).join('');  
-    //        console.log(html);
-    //        document.getElementById("text").innerHTML=html;
-    //    });
-
        .then(data=> {
         console.log(data);  
         const html=data.articles.map(articles=>{
